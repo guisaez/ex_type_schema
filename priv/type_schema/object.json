@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "foo": {
+            "type": "string",
+            "required": false
+        },
+        "foo_num": {
+            "type": "atom",
+            "enum": ["hello", "bye"]
+        },
+        "foo_obj": {
+            "type": "object"
+        },
+        "foo_object": {
+            "type": "object",
+            "object_type": "bar"
+        }
+    }
+}
