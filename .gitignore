@@ -24,3 +24,6 @@ ex_type_schema-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+.DS_Store
+/*/.DS_Store

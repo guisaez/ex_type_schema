@@ -334,7 +334,9 @@ defmodule ExTypeSchema do
         try do
           resolved_schema = ExJsonSchema.Schema.resolve(json_schema)
 
-          case ExJsonSchema.Validator.validate(resolved_schema, data) do
+          data_ = data |> Enum.map(fn {k, v} -> {to_string(k), v} end) |> Map.new()
+
+          case ExJsonSchema.Validator.validate(resolved_schema, data_) do
             :ok ->
               :ok
 
